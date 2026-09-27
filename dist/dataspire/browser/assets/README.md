@@ -1,0 +1,1 @@
+# DataSpire Static Assets Directory
