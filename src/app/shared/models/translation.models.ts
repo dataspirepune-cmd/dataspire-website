@@ -1,0 +1,238 @@
+import { ApproachStep, CompanyStat, IndustryItem, JobPosition, NavItem, ServiceItem, SolutionItem, TeamMember, WhyFeature } from './site.models';
+
+export type SupportedLanguage = 'en' | 'mr' | 'hi';
+
+export interface LanguageOption {
+  code: SupportedLanguage;
+  label: string;
+  nativeLabel: string;
+  flag: string;
+}
+
+export interface SiteTranslation {
+  lang: SupportedLanguage;
+  nav: {
+    links: NavItem[];
+    cta: string;
+    tagline: string;
+    languageLabel: string;
+  };
+  home: {
+    heroBadge: string;
+    heroTitlePrefix: string;
+    heroTitleHighlight: string;
+    heroSubheading: string;
+    exploreSolutionsBtn: string;
+    talkToUsBtn: string;
+    trustBadge: string;
+    trustTitle: string;
+    trustTitleHighlight: string;
+    trustSubtitle: string;
+    trustCards: {
+      edu: { title: string; desc: string; link: string };
+      staff: { title: string; desc: string; link: string };
+      smb: { title: string; desc: string; link: string };
+      bank: { title: string; desc: string; link: string };
+    };
+    whatBadge: string;
+    whatTitle: string;
+    whatTitleHighlight: string;
+    whatLead: string;
+    whatSub: string;
+    pillars: { title: string; desc: string }[];
+    whatBtn: string;
+    matrix: {
+      insights: { title: string; desc: string };
+      automation: { title: string; desc: string };
+      security: { title: string; desc: string };
+    };
+    solutionsBadge: string;
+    solutionsTitle: string;
+    solutionsTitleHighlight: string;
+    solutionsSubtitle: string;
+    viewAllSolutionsBtn: string;
+    industriesBadge: string;
+    industriesTitle: string;
+    industriesTitleHighlight: string;
+    industriesSubtitle: string;
+    approachBadge: string;
+    approachTitle: string;
+    approachTitleHighlight: string;
+    approachSubtitle: string;
+    whyBadge: string;
+    whyTitle: string;
+    whyTitleHighlight: string;
+    whySubtitle: string;
+    careersHiringBadge: string;
+    careersTitle: string;
+    careersDesc: string;
+    careersBtn: string;
+    ctaBadge: string;
+    ctaTitle: string;
+    ctaDesc: string;
+    ctaPrimaryBtn: string;
+    ctaSecondaryBtn: string;
+  };
+  about: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    lead: string;
+    missionTag: string;
+    missionTitle: string;
+    missionDesc: string;
+    visionTag: string;
+    visionTitle: string;
+    visionDesc: string;
+    leadershipBadge: string;
+    leadershipTitle: string;
+    leadershipTitleHighlight: string;
+    leadershipSubtitle: string;
+    philBadge: string;
+    philTitle: string;
+    philTitleHighlight: string;
+    philSubtitle: string;
+    principles: { num: string; title: string; desc: string }[];
+    approachBadge: string;
+    approachTitle: string;
+    approachTitleHighlight: string;
+    approachSubtitle: string;
+  };
+  solutions: {
+    heroBadge: string;
+    heroTitle: string;
+    heroTitleHighlight: string;
+    heroLead: string;
+    jumpLabel: string;
+    jumpPills: { label: string; fragment: string }[];
+    suitesBadge: string;
+    suitesTitle: string;
+    suitesTitleHighlight: string;
+    suitesSubtitle: string;
+    customizableTag: string;
+    modulesHeading: string;
+    benefitsHeading: string;
+    requestCustomizationBtn: string;
+    coreBadge: string;
+    coreTitle: string;
+    coreTitleHighlight: string;
+    coreSubtitle: string;
+  };
+  services: {
+    heroBadge: string;
+    heroTitle: string;
+    heroTitleHighlight: string;
+    heroLead: string;
+    jumpLabel: string;
+  };
+  industries: {
+    heroBadge: string;
+    heroTitle: string;
+    heroTitleHighlight: string;
+    heroLead: string;
+    jumpLabel: string;
+    insightsBadge: string;
+    insightsTitle: string;
+    insightsDesc: string;
+    insightsList: { num: string; title: string; desc: string }[];
+  };
+  careers: {
+    heroBadge: string;
+    heroTitle: string;
+    heroTitleHighlight: string;
+    heroLead: string;
+    cultureItems: { icon: string; title: string; desc: string }[];
+    openingsBadge: string;
+    openingsTitle: string;
+    openingsTitleHighlight: string;
+    openingsSubtitle: string;
+    applyModal: {
+      titlePrefix: string;
+      instructions: string;
+      emailLabel: string;
+      tip: string;
+      openEmailBtn: string;
+    };
+  };
+  contact: {
+    heroBadge: string;
+    heroTitle: string;
+    heroTitleHighlight: string;
+    heroLead: string;
+    cardHeading: string;
+    cardSub: string;
+    waSupportTag: string;
+    waSub: string;
+    chatWaBtn: string;
+    generalInquiries: string;
+    phoneLabel: string;
+    locationLabel: string;
+    desksHeading: string;
+    desks: { business: string; careers: string; partnerships: string };
+    formTitle: string;
+    formSubtitle: string;
+    waRoutingBadge: string;
+    redirectingText: string;
+    redirectingSub: string;
+    openWaNowBtn: string;
+    emailRedirectingText: string;
+    emailRedirectingSub: string;
+    openEmailNowBtn: string;
+    openGmailBtn: string;
+    labels: {
+      name: string;
+      email: string;
+      phone: string;
+      organization: string;
+      interestedIn: string;
+      message: string;
+      sendBtn: string;
+      sendWaBtn: string;
+      sendEmailBtn: string;
+      chooseMethod: string;
+    };
+    interestOptions: { value: string; label: string }[];
+  };
+  footer: {
+    bio: string;
+    headquarters: string;
+    getInTouch: string;
+    generalInquiry: string;
+    directHotline: string;
+    ctaMicro: string;
+    scheduleConsultationBtn: string;
+    copyright: string;
+    privacy: string;
+    terms: string;
+    security: string;
+    columns: {
+      companyTitle: string;
+      industriesTitle: string;
+      servicesTitle: string;
+    };
+  };
+  common: {
+    exploreArchitecture: string;
+    viewDetailedSolution: string;
+    coreCapabilities: string;
+    standardDeliverables: string;
+    includedModules: string;
+    keyBeneficiaries: string;
+    requiredSkills: string;
+    keyResponsibilities: string;
+    applyForRole: string;
+    chatOnWhatsApp: string;
+    emailUs: string;
+  };
+  data: {
+    whyFeatures: WhyFeature[];
+    companyStats: CompanyStat[];
+    approachSteps: ApproachStep[];
+    coreSolutions: SolutionItem[];
+    domainSuites: SolutionItem[];
+    servicesList: ServiceItem[];
+    industriesList: IndustryItem[];
+    careerPositions: JobPosition[];
+    leadershipTeam: TeamMember[];
+  };
+}

@@ -1,0 +1,237 @@
+.tech-visual-container {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.glow-orb {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.45;
+  z-index: 0;
+
+  &.top-left {
+    top: -40px;
+    left: -40px;
+    background: #0284c7;
+  }
+
+  &.bottom-right {
+    bottom: -40px;
+    right: -40px;
+    background: #6366f1;
+  }
+}
+
+.visual-glass-board {
+  position: relative;
+  z-index: 1;
+  background: rgba(12, 20, 39, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: rgba(8, 13, 24, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  .window-controls {
+    display: flex;
+    gap: 6px;
+
+    .ctrl {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+
+      &.red { background: #ef4444; }
+      &.yellow { background: #f59e0b; }
+      &.green { background: #10b981; }
+    }
+  }
+
+  .board-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
+  }
+
+  .board-badge {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+  }
+}
+
+.board-body {
+  position: relative;
+  padding: 1.25rem;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Node Animations */
+.pulse-node {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.flow-line {
+  stroke-dasharray: 6 4;
+  animation: dash 20s linear infinite;
+
+  &.line-1 {
+    stroke-dasharray: none;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(15, 26, 49, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  animation: float 4.5s ease-in-out infinite;
+
+  .badge-icon {
+    font-size: 1.15rem;
+  }
+
+  .badge-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .badge-val {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+  }
+
+  &.badge-edu {
+    top: 25px;
+    left: 20px;
+    animation-delay: 0s;
+  }
+
+  &.badge-bank {
+    bottom: 75px;
+    left: 20px;
+    animation-delay: 1.2s;
+  }
+
+  &.badge-hr {
+    top: 30px;
+    right: 20px;
+    animation-delay: 2.2s;
+  }
+
+  &.badge-analytics {
+    bottom: 75px;
+    right: 20px;
+    animation-delay: 3.1s;
+  }
+}
+
+.metric-chart-bar {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 17, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+
+  .chart-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+  }
+
+  .bar-track {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+
+    .bar-fill {
+      width: 84%;
+      height: 100%;
+      background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
+      border-radius: 3px;
+      box-shadow: 0 0 10px #38bdf8;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-badge {
+    padding: 0.35rem 0.55rem;
+    
+    .badge-title {
+      font-size: 0.65rem;
+    }
+    .badge-val {
+      font-size: 0.6rem;
+    }
+
+    &.badge-edu { top: 10px; left: 10px; }
+    &.badge-bank { bottom: 65px; left: 10px; }
+    &.badge-hr { top: 10px; right: 10px; }
+    &.badge-analytics { bottom: 65px; right: 10px; }
+  }
+}
