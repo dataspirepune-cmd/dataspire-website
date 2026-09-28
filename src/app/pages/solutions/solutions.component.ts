@@ -95,7 +95,11 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
 
               <!-- Action -->
               <div class="suite-action">
-                <a routerLink="/contact" class="btn btn-primary">
+                <a *ngIf="suite.id === 'digital-marketing-growth'" [routerLink]="['/services']" [fragment]="'digital-marketing'" class="btn btn-primary">
+                  <span>{{ ts.t().solutions.marketingSuiteBtn || 'Explore Digital Marketing Services' }}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+                <a *ngIf="suite.id !== 'digital-marketing-growth'" routerLink="/contact" class="btn btn-primary">
                   <span>{{ ts.t().solutions.requestCustomizationBtn }}</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </a>

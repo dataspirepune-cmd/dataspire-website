@@ -67,6 +67,11 @@ export interface SiteTranslation {
     careersTitle: string;
     careersDesc: string;
     careersBtn: string;
+    digitalGrowthBadge?: string;
+    digitalGrowthTitle?: string;
+    digitalGrowthSubtitle?: string;
+    digitalGrowthText?: string;
+    digitalGrowthBtn?: string;
     ctaBadge: string;
     ctaTitle: string;
     ctaDesc: string;
@@ -117,6 +122,11 @@ export interface SiteTranslation {
     coreTitle: string;
     coreTitleHighlight: string;
     coreSubtitle: string;
+    marketingSuiteBadge?: string;
+    marketingSuiteTitle?: string;
+    marketingSuiteSubtitle?: string;
+    marketingSuiteDesc?: string;
+    marketingSuiteBtn?: string;
   };
   services: {
     heroBadge: string;
@@ -124,6 +134,12 @@ export interface SiteTranslation {
     heroTitleHighlight: string;
     heroLead: string;
     jumpLabel: string;
+    techBadge?: string;
+    techTitle?: string;
+    techSubtitle?: string;
+    marketingBadge?: string;
+    marketingTitle?: string;
+    marketingSubtitle?: string;
   };
   industries: {
     heroBadge: string;
@@ -135,6 +151,11 @@ export interface SiteTranslation {
     insightsTitle: string;
     insightsDesc: string;
     insightsList: { num: string; title: string; desc: string }[];
+    marketingBadge?: string;
+    marketingTitle?: string;
+    marketingSubtitle?: string;
+    marketingDesc?: string;
+    marketingPillars?: { title: string; desc: string; icon: string }[];
   };
   careers: {
     heroBadge: string;
@@ -231,6 +252,8 @@ export interface SiteTranslation {
     coreSolutions: SolutionItem[];
     domainSuites: SolutionItem[];
     servicesList: ServiceItem[];
+    techServicesList?: ServiceItem[];
+    marketingServicesList?: ServiceItem[];
     industriesList: IndustryItem[];
     careerPositions: JobPosition[];
     leadershipTeam: TeamMember[];

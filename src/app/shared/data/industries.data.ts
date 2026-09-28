@@ -5,7 +5,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     id: 'education',
     title: 'Education',
     subtitle: 'Schools, Colleges & Universities',
-    description: 'Transforming institutional administration into a cohesive digital ecosystem. From student lifecycle and online fee collection to automated attendance and academic reporting, we make education management frictionless.',
+    description: 'Transforming institutional administration and admissions into a cohesive digital ecosystem. From student lifecycle and online fee collection to academic reporting and digital marketing outreach for schools, colleges, and educational institutions, we make education management frictionless.',
     icon: 'school',
     targetAudience: [
       'K-12 Schools & School Chains',
@@ -18,7 +18,8 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
       'Biometric & RFID Smart Attendance',
       'Digital Fee Invoicing & Receipts',
       'Exam Management & Report Cards',
-      'Parent-Teacher Communication Portal'
+      'Parent-Teacher Communication Portal',
+      'Digital Marketing & Admissions Outreach'
     ],
     linkRoute: '/solutions',
     linkFragment: 'education-management'
@@ -49,7 +50,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     id: 'small-medium-businesses',
     title: 'Small & Medium Businesses',
     subtitle: 'Agile Tools for Commercial Growth',
-    description: 'Equipping growing businesses with modern digital tools to track sales pipelines, automate customer invoicing, manage inventory levels, and gain complete visibility into operational profit margins.',
+    description: 'Equipping growing businesses and professional services with modern digital tools to track sales pipelines, automate invoicing, manage inventory, and expand customer reach through targeted digital marketing strategies.',
     icon: 'store',
     targetAudience: [
       'Retail & Wholesale Distributors',
@@ -62,7 +63,8 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
       'GST Billing & Quotation Generation',
       'Customer Master & Payment Follow-ups',
       'Expense & Cash Flow Tracking',
-      'Daily Gross Profit & Sales Reports'
+      'Daily Gross Profit & Sales Reports',
+      'Digital Marketing & Customer Acquisition (SEO, Social & PPC)'
     ],
     linkRoute: '/solutions',
     linkFragment: 'small-business-solutions'
@@ -115,7 +117,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     id: 'enterprise-organizations',
     title: 'Enterprise Organizations',
     subtitle: 'Scalable Systems for Complex Workflows',
-    description: 'High-throughput custom web applications, cloud infrastructure migrations, data pipelines, and analytics platforms built for large organizations seeking digital transformation.',
+    description: 'High-throughput custom web applications, cloud infrastructure migrations, data pipelines, and omni-channel digital marketing solutions built for organizations seeking complete digital transformation.',
     icon: 'building',
     targetAudience: [
       'Multi-Location Corporate Enterprises',
@@ -128,6 +130,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
       'Bespoke Enterprise Web Portals',
       'Data Analytics & Power BI Pipelines',
       'System API Integration & Middleware',
+      'Brand Growth & Omni-Channel Digital Marketing Campaigns',
       '24/7 Managed Application Support'
     ],
     linkRoute: '/solutions',

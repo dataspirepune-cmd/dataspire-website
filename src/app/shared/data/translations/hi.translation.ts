@@ -7,8 +7,8 @@ export const HI_TRANSLATION: SiteTranslation = {
     links: [
       { label: 'होम', route: '/' },
       { label: 'हमारे बारे में', route: '/about' },
-      { 
-        label: 'समाधान (Solutions)', 
+      {
+        label: 'समाधान (Solutions)',
         route: '/solutions',
         children: [
           { label: 'शिक्षा संस्थान प्रबंधन', route: '/solutions', fragment: 'education-management', description: 'स्कूल, कॉलेज और विश्वविद्यालय' },
@@ -19,8 +19,8 @@ export const HI_TRANSLATION: SiteTranslation = {
           { label: 'क्लाउड और कस्टम सॉफ्टवेयर', route: '/solutions', fragment: 'cloud-solutions', description: 'सुरक्षित और स्केलेबल क्लाउड' }
         ]
       },
-      { 
-        label: 'सेवाएं (Services)', 
+      {
+        label: 'सेवाएं (Services)',
         route: '/services',
         children: [
           { label: 'वेब एप्लिकेशन डेवलपमेंट', route: '/services', fragment: 'web-app-dev', description: 'आधुनिक और रिस्पॉन्सिव वेब ऐप्स' },
@@ -28,11 +28,16 @@ export const HI_TRANSLATION: SiteTranslation = {
           { label: 'डेटा एनालिटिक्स व विज़ुअलाइज़ेशन', route: '/services', fragment: 'analytics-visualization', description: 'इंटरैक्टिव विजुअल डैशबोर्ड' },
           { label: 'क्लाउड और इंफ्रास्ट्रक्चर', route: '/services', fragment: 'cloud-infrastructure', description: 'सुरक्षित और विश्वसनीय क्लाउड' },
           { label: 'API और सिस्टम इंटीग्रेशन', route: '/services', fragment: 'api-integration', description: 'सॉफ्टवेयर और बायोमेट्रिक डिवाइस लिंकेज' },
-          { label: 'प्रोसेस ऑटोमेशन', route: '/services', fragment: 'automation-services', description: 'बार-बार होने वाले काम को ऑटोमेट करें' }
+          { label: 'प्रोसेस ऑटोमेशन', route: '/services', fragment: 'automation-services', description: 'बार-बार होने वाले काम को ऑटोमेट करें' },
+          { label: 'डिजिटल मार्केटिंग', route: '/services', fragment: 'digital-marketing', description: 'व्यापक डिजिटल विकास रणनीतियां' },
+          { label: 'SEO (सर्च ऑप्टिमाइजेशन)', route: '/services', fragment: 'seo-services', description: 'कीवर्ड रैंकिंग और ऑर्गेनिक विजिबिलिटी' },
+          { label: 'सोशल मीडिया मार्केटिंग', route: '/services', fragment: 'social-media-marketing', description: 'ब्रांड प्रमोशन और ऑडियंस एंगेजमेंट' },
+          { label: 'PPC (पे-पर-क्लिक)', route: '/services', fragment: 'ppc-advertising', description: 'टारगेटेड लीड जनरेशन विज्ञापन' },
+          { label: 'ईमेल मार्केटिंग', route: '/services', fragment: 'email-marketing', description: 'स्वचालित ईमेल अभियान' }
         ]
       },
-      { 
-        label: 'उद्योग (Industries)', 
+      {
+        label: 'उद्योग (Industries)',
         route: '/industries',
         children: [
           { label: 'शिक्षा और स्कूल', route: '/industries', fragment: 'education', description: 'स्कूल, कॉलेज और विश्वविद्यालय' },
@@ -138,6 +143,11 @@ export const HI_TRANSLATION: SiteTranslation = {
     careersTitle: 'हमारे साथ संस्थागत सॉफ्टवेयर का भविष्य बनाएं',
     careersDesc: 'हम ऐसे उत्साही लोगों की तलाश में हैं जो तकनीक से वास्तविक दुनिया की समस्याओं को हल करना पसंद करते हैं।',
     careersBtn: 'खुले पद देखें',
+    digitalGrowthBadge: 'डिजिटल मार्केटिंग सेवाएं',
+    digitalGrowthTitle: 'Technology + Digital Growth',
+    digitalGrowthSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
+    digitalGrowthText: 'सॉफ्टवेयर और डेटा समाधानों से लेकर डिजिटल मार्केटिंग तक, डेटास्पायर संगठनों को बेहतर तकनीक बनाने और उनकी डिजिटल उपस्थिति को मजबूत करने में मदद करता है।',
+    digitalGrowthBtn: 'डिजिटल मार्केटिंग देखें',
     ctaBadge: 'हमारे विशेषज्ञों से जुड़ें',
     ctaTitle: 'डेटास्पायर के साथ आज ही अपने संस्थान का डिजिटल परिवर्तन करें',
     ctaDesc: 'चाहे आप कॉलेज, सहकारी बैंक या व्यवसाय चलाते हों, आइए चर्चा करें कि तकनीक आपके संचालन को कैसे बेहतर बना सकती है।',
@@ -187,6 +197,7 @@ export const HI_TRANSLATION: SiteTranslation = {
       { label: '👥 स्टाफ और एचआर', fragment: 'staff-hr-management' },
       { label: '💼 लघु व्यवसाय', fragment: 'small-business-solutions' },
       { label: '🏦 को-ऑपरेटिव बैंक MIS', fragment: 'cooperative-banking-solutions' },
+      { label: '🚀 डिजिटल मार्केटिंग', fragment: 'digital-marketing-growth' },
       { label: '⚡ मुख्य क्षमताएं', fragment: 'core-solutions' }
     ],
     suitesBadge: 'संस्थागत सुइट्स',
@@ -200,14 +211,25 @@ export const HI_TRANSLATION: SiteTranslation = {
     coreBadge: 'मॉड्यूलर टेक्नोलॉजी कंपोनेंट्स',
     coreTitle: 'व्यापक और मजबूत',
     coreTitleHighlight: 'तकनीकी क्षमताएं',
-    coreSubtitle: 'हमारे प्लेटफॉर्म्स को शक्ति देने वाले और आपके मौजूदा सिस्टम में आसानी से जुड़ने वाले बिल्डिंग ब्लॉक्स।'
+    coreSubtitle: 'हमारे प्लेटफॉर्म्स को शक्ति देने वाले और आपके मौजूदा सिस्टम में आसानी से जुड़ने वाले बिल्डिंग ब्लॉक्स.',
+    marketingSuiteBadge: 'डिजिटल मार्केटिंग सेवाएं',
+    marketingSuiteTitle: 'Digital Marketing & Growth Solutions',
+    marketingSuiteSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
+    marketingSuiteDesc: 'डेटास्पायर शैक्षणिक संस्थानों, स्कूलों, कॉलेजों, लघु व मध्यम व्यवसायों और संगठनों को समग्र डिजिटल मार्केटिंग समाधान प्रदान करता है।',
+    marketingSuiteBtn: 'डिजिटल मार्केटिंग सेवाएं देखें'
   },
   services: {
-    heroBadge: 'इंजीनियरिंग और एनालिटिक्स सेवाएं',
+    heroBadge: 'प्रौद्योगिकी और डिजिटल मार्केटिंग सेवाएं',
     heroTitle: 'डिजिटल उत्कृष्टता के लिए',
-    heroTitleHighlight: 'एंटरप्राइज सेवाएं',
-    heroLead: 'आधुनिक वेब इंजीनियरिंग और कस्टम सॉफ्टवेयर से लेकर उच्च-प्रदर्शन डेटा पाइपलाइनों और 24/7 इंफ्रास्ट्रक्चर प्रबंधन तक की पूर्ण सेवाएं।',
-    jumpLabel: 'सेवा पर जाएं:'
+    heroTitleHighlight: 'समग्र सेवाएं',
+    heroLead: 'आधुनिक वेब इंजीनियरिंग और कस्टम सॉफ्टवेयर से लेकर उच्च-प्रदर्शन डेटा पाइपलाइनों और प्रभावी डिजिटल मार्केटिंग तक की संपूर्ण सेवाएं।',
+    jumpLabel: 'सेवा पर जाएं:',
+    techBadge: 'तकनीकी सेवाएं',
+    techTitle: 'Technology Services',
+    techSubtitle: 'प्रदर्शन और सुरक्षा के लिए निर्मित एंटरप्राइज-ग्रेड सॉफ्टवेयर, क्लाउड इंफ्रास्ट्रक्चर और डेटा सिस्टम।',
+    marketingBadge: 'डिजिटल मार्केटिंग सेवाएं',
+    marketingTitle: 'Digital Marketing Services',
+    marketingSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.'
   },
   industries: {
     heroBadge: 'लक्षित क्षेत्र और वर्टिकल्स',
@@ -222,7 +244,11 @@ export const HI_TRANSLATION: SiteTranslation = {
       { num: '01', title: 'कार्यप्रणाली में शून्य समझौता', desc: 'हम ऐसी सुविधाएं बनाते हैं जो आपके मौजूदा पदानुक्रम और अनुमतियों से 100% मेल खाती हैं।' },
       { num: '02', title: 'नियमों का अनुपालन', desc: 'विश्वविद्यालय नियमों, सहकारी रजिस्ट्रार और टैक्स कानूनों के अनुरूप पहले से तैयार रिपोर्ट।' },
       { num: '03', title: 'उपयोग में तेज गति', desc: 'सहज और सरल इंटरफेस जिसे स्टाफ और शाखा अधिकारी कुछ ही दिनों में सीख लेते हैं।' }
-    ]
+    ],
+    marketingBadge: 'डिजिटल मार्केटिंग सेवाएं',
+    marketingTitle: 'प्रत्येक क्षेत्र के लिए विशेष डिजिटल मार्केटिंग',
+    marketingSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
+    marketingDesc: 'शैक्षणिक संस्थानों, स्कूलों, कॉलेजों, छोटे व मध्यम व्यवसायों और संगठनों के लिए विशेष डिजिटल विकास रणनीति।'
   },
   careers: {
     heroBadge: 'हमारी इंजीनियरिंग और एनालिटिक्स टीम से जुड़ें',
@@ -516,6 +542,29 @@ export const HI_TRANSLATION: SiteTranslation = {
           'सभी गतिविधियों के लॉग और अनुमतियों के साथ ऑडिट तत्परता मजबूत करें',
           'निदेशक मंडल और सीईओ को तत्काल निर्णय लेने के लिए समर्पित डैशबोर्ड'
         ]
+      },
+      {
+        id: 'digital-marketing-growth',
+        title: 'डिजिटल मार्केटिंग और विकास समाधान',
+        subtitle: 'शैक्षणिक संस्थानों, कॉलेजों, स्कूलों, व्यवसायों और संगठनों के लिए',
+        description: 'अपनी डिजिटल उपस्थिति का निर्माण करें, सही लक्षित दर्शकों तक पहुंचें और ऑनलाइन दृश्यता को मापने योग्य व्यावसायिक वृद्धि में बदलें। हम संस्थागत प्रवेश, ग्राहक प्राप्ति और ब्रांड विस्तार के लिए डेटा-संचालित विपणन समाधान प्रदान करते हैं।',
+        icon: 'trending-up',
+        badge: 'डिजिटल मार्केटिंग सेवाएं',
+        modules: [
+          'समग्र डिजिटल मार्केटिंग रणनीति और निष्पादन',
+          'सर्च इंजन ऑप्टिमाइजेशन (SEO) और तकनीकी ऑडिट',
+          'सोशल मीडिया मार्केटिंग और प्रमुख प्लेटफॉर्म्स पर ब्रांड प्रचार',
+          'PPC विज्ञापन और लक्षित लीड जेनरेशन',
+          'स्वचालित ईमेल मार्केटिंग और ड्रिप अभियान',
+          'सामग्री और संस्थागत प्रवेश अभियान योजना (Content Planning)',
+          'वेबसाइट ट्रैफ़िक विश्लेषण और रूपांतरण दर सुधार',
+          'मल्टी-चैनल डिजिटल प्रदर्शन और ROI रिपोर्टिंग'
+        ],
+        benefits: [
+          'स्कूलों, कॉलेजों और शैक्षणिक संस्थानों के लिए संभावित छात्रों और अभिभावकों को आकर्षित करना',
+          'लघु और मध्यम व्यवसायों के लिए उच्च-परिवर्तन व्यावसायिक पूछताछ और लीड उत्पन्न करना',
+          'सर्च इंजनों पर शीर्ष रैंकिंग और विश्वसनीय ब्रांड अधिकार स्थापित करना'
+        ]
       }
     ],
     servicesList: [
@@ -661,6 +710,96 @@ export const HI_TRANSLATION: SiteTranslation = {
           'नियमित सुरक्षा अपडेट',
           'प्राथमिकता टिकट सहायता',
           'स्टाफ प्रशिक्षण सत्र'
+        ]
+      },
+      {
+        id: 'digital-marketing',
+        title: 'डिजिटल मार्केटिंग (Digital Marketing)',
+        description: 'ऑनलाइन दृश्यता, ग्राहक सहभागिता और व्यावसायिक विकास में सुधार के लिए संपूर्ण डिजिटल मार्केटिंग रणनीतियां।',
+        icon: 'trending-up',
+        features: [
+          'डेटा-संचालित ऑम्नि-चैनल विकास और बाजार स्थिति',
+          'ब्रांड प्रतिष्ठा, डिजिटल उपस्थिति और पहुंच प्रबंधन',
+          'ग्राहक अधिग्रहण और रूपांतरण दर अनुकूलन (CRO)',
+          'क्रॉस-प्लेटफ़ॉर्म प्रदर्शन विश्लेषण और आरओआई (ROI)'
+        ],
+        deliverables: [
+          'व्यापक डिजिटल विकास रणनीति रोडमैप',
+          'लक्षित दर्शक और प्रतिस्पर्धी विश्लेषण',
+          'मासिक प्रदर्शन और पहुंच रिपोर्टिंग डैशबोर्ड',
+          'मल्टी-चैनल अभियान योजना'
+        ]
+      },
+      {
+        id: 'seo-services',
+        title: 'सर्च इंजन ऑप्टिमाइजेशन (SEO)',
+        description: 'कीवर्ड अनुकूलन, तकनीकी एसईओ, ऑन-पेज अनुकूलन और सामग्री रणनीतियों के माध्यम से सर्च इंजन पर वेबसाइट की दृश्यता बढ़ाएं।',
+        icon: 'search',
+        features: [
+          'व्यापक तकनीकी एसईओ ऑडिट और गति सुधार',
+          'गहन कीवर्ड अनुसंधान और प्रतिस्पर्धी विश्लेषण',
+          'ऑन-पेज सामग्री अनुकूलन और मेटा टैग्स',
+          'उच्च-गुणवत्ता बैकलिंक रणनीति और स्थानीय खोज उपस्थिति'
+        ],
+        deliverables: [
+          'पूर्ण तकनीकी एसईओ ऑडिट रिपोर्ट',
+          'लक्षित कीवर्ड रैंकिंग मैट्रिक्स',
+          'अनुकूलित मेटाडेटा और संरचित डेटा स्कीमा',
+          'मासिक ऑर्गेनिक ट्रैफिक और दृश्यता रिपोर्ट'
+        ]
+      },
+      {
+        id: 'social-media-marketing',
+        title: 'सोशल मीडिया मार्केटिंग (Social Media)',
+        description: 'प्रमुख सोशल प्लेटफॉर्म पर सोशल मीडिया रणनीति, सामग्री योजना, दर्शक सहभागिता और ब्रांड प्रचार।',
+        icon: 'share-2',
+        features: [
+          'LinkedIn, Instagram, Facebook और X के लिए विशेष रणनीति',
+          'सामग्री कैलेंडर योजना और रचनात्मक विजुअल डिजाइन',
+          'सक्रिय समुदाय प्रबंधन और दर्शक सहभागिता',
+          'ब्रांड स्टोरीटेलिंग और लक्षित प्रचार अभियान'
+        ],
+        deliverables: [
+          'मासिक सामग्री कैलेंडर और ग्राफिक्स',
+          'ब्रांडेड सोशल मीडिया टेम्प्लेट',
+          'सहभागिता, पहुंच और विकास विश्लेषण',
+          'समुदाय संवाद दिशानिर्देश'
+        ]
+      },
+      {
+        id: 'ppc-advertising',
+        title: 'पीपीसी विज्ञापन (Pay-Per-Click)',
+        description: 'लक्षित दर्शकों तक पहुंचने और मापने योग्य लीड और बिक्री उत्पन्न करने के लिए सशुल्क विज्ञापन अभियान।',
+        icon: 'mouse-pointer',
+        features: [
+          'Google Search, Display और YouTube विज्ञापन अभियान',
+          'Meta (Facebook/Instagram) और LinkedIn लक्षित विज्ञापन',
+          'उच्च रूपांतरण लैंडिंग पृष्ठ और सम्मोहक विज्ञापन कॉपी',
+          'क्रिएटिव, कीवर्ड और बिडिंग के लिए A/B परीक्षण'
+        ],
+        deliverables: [
+          'कॉन्फ़िगर किए गए विज्ञापन खाते और ऑडियंस खंड',
+          'प्रभावी क्रिएटिव बैनर और विज्ञापन कॉपी',
+          'रूपांतरण ट्रैकिंग पिक्सेल और इवेंट सेटअप',
+          'आरओएएस (ROAS) और लागत-प्रति-लीड रिपोर्ट'
+        ]
+      },
+      {
+        id: 'email-marketing',
+        title: 'ईमेल मार्केटिंग (Email Marketing)',
+        description: 'पेशेवर ईमेल अभियान, ग्राहक संचार, प्रचार अभियान और स्वचालित ईमेल रणनीतियां।',
+        icon: 'mail',
+        features: [
+          'ग्राहक सूची विभाजन और स्वच्छता प्रबंधन',
+          'उत्तरदायी, ब्रांडेड HTML ईमेल टेम्प्लेट डिज़ाइन',
+          'स्वचालित ड्रिप अनुक्रम और लीड नर्चर वर्कफ़्लो',
+          'ओपन रेट और क्लिक-थ्रू दर (CTR) अनुकूलन'
+        ],
+        deliverables: [
+          'कस्टम उत्तरदायी ईमेल टेम्प्लेट',
+          'स्वचालित स्वागत और ऑनबोर्डिंग ईमेल प्रवाह',
+          'अनुसूचित प्रचार समाचार पत्र और अभियान',
+          'ओपन रेट, क्लिक और सहभागिता विश्लेषण रिपोर्ट'
         ]
       }
     ],
@@ -947,7 +1086,7 @@ export const HI_TRANSLATION: SiteTranslation = {
     leadershipTeam: [
       {
         id: 'ceo',
-        name: 'कार्यकारी नेतृत्व',
+        name: 'किरण धुमाळ',
         role: 'Chief Executive Officer (CEO)',
         roleShort: 'CEO',
         image: 'assets/team/ceo.jpg',
@@ -955,8 +1094,17 @@ export const HI_TRANSLATION: SiteTranslation = {
         focus: ['रणनीतिक विज़न', 'एंटरप्राइज ट्रांसफॉर्मेशन', 'ऑपरेशन्स उत्कृष्टता']
       },
       {
+        id: 'cto',
+        name: 'बजरंग गंगनर',
+        role: 'Co-Founder & Chief Technology Officer (CTO)',
+        roleShort: 'Co-Founder & CTO',
+        image: 'assets/team/cto.jpg',
+        bio: 'फुल-स्टैक आर्किटेक्चर, सॉफ्टवेयर इंजीनियरिंग इनोवेशन, स्केलेबल प्रोडक्ट डिज़ाइन और आधुनिक डिजिटल इकोसिस्टम के प्रमुख।',
+        focus: ['सिस्टम आर्किटेक्चर', 'सॉफ्टवेयर इंजीनियरिंग', 'उभरती तकनीक']
+      },
+      {
         id: 'cio',
-        name: 'कार्यकारी नेतृत्व',
+        name: 'रामेश्वर क्षीरसागर',
         role: 'Chief Information Officer (CIO)',
         roleShort: 'CIO',
         image: 'assets/team/cio.jpg',
@@ -964,13 +1112,30 @@ export const HI_TRANSLATION: SiteTranslation = {
         focus: ['इन्फॉर्मेशन आर्किटेक्चर', 'क्लाउड गवर्नेंस', 'आईटी स्ट्रैटेजी']
       },
       {
-        id: 'cto',
-        name: 'कार्यकारी नेतृत्व',
-        role: 'Co-Founder & Chief Technology Officer (CTO)',
-        roleShort: 'Co-Founder & CTO',
-        image: 'assets/team/cto.jpg',
-        bio: 'फुल-स्टैक आर्किटेक्चर, सॉफ्टवेयर इंजीनियरिंग इनोवेशन, स्केलेबल प्रोडक्ट डिज़ाइन और आधुनिक डिजिटल इकोसिस्टम के प्रमुख।',
-        focus: ['सिस्टम आर्किटेक्चर', 'सॉफ्टवेयर इंजीनियरिंग', 'उभरती तकनीक']
+        id: 'marketing-specialist',
+        name: 'प्रकाश गवली',
+        role: 'Digital Marketing Specialist',
+        roleShort: 'Marketing Specialist',
+        department: 'डिजिटल मार्केटिंग',
+        image: 'assets/team/prakash-gavali.jpg',
+        bio: 'डेटास्पायर की डिजिटल मार्केटिंग रणनीति, सर्वव्यापी दर्शक विकास, सर्च इंजन ऑप्टिमाइजेशन (SEO), पीपीसी अभियान और परिणाम-आधारित प्रदर्शन मार्केटिंग का नेतृत्व।',
+        focus: [
+          'डिजिटल मार्केटिंग रणनीति',
+          'एसईओ और ट्रैफिक वृद्धि',
+          'सोशल मीडिया मार्केटिंग',
+          'पीपीसी और लीड जनरेशन'
+        ],
+        responsibilities: [
+          'Digital Marketing Strategy',
+          'SEO',
+          'Social Media Marketing',
+          'PPC Campaign Management',
+          'Email Marketing',
+          'Content & Campaign Planning',
+          'Website Traffic Analysis',
+          'Lead Generation',
+          'Digital Performance Reporting'
+        ]
       }
     ]
   }

@@ -201,6 +201,65 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
         </div>
       </section>
 
+      <!-- 3.5. TECHNOLOGY + DIGITAL GROWTH SECTION -->
+      <section class="section-padding digital-growth-section">
+        <div class="container">
+          <div class="glass-card digital-growth-card">
+            <div class="digital-growth-content">
+              <div class="pill-badge">
+                <span class="dot"></span>
+                <span>{{ ts.t().home.digitalGrowthBadge || 'Digital Marketing Services' }}</span>
+              </div>
+              <h2 class="growth-title">
+                {{ ts.t().home.digitalGrowthTitle || 'Technology + Digital Growth' }}
+              </h2>
+              <p class="growth-subtitle text-gradient">
+                {{ ts.t().home.digitalGrowthSubtitle || 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.' }}
+              </p>
+              <p class="growth-text">
+                {{ ts.t().home.digitalGrowthText || 'From software and data solutions to digital marketing, DataSpire helps organizations build better technology and strengthen their digital presence.' }}
+              </p>
+              <div class="growth-tags">
+                <span class="growth-tag">Digital Marketing</span>
+                <span class="growth-tag">SEO</span>
+                <span class="growth-tag">Social Media Marketing</span>
+                <span class="growth-tag">PPC</span>
+                <span class="growth-tag">Email Marketing</span>
+              </div>
+              <div class="growth-actions">
+                <a [routerLink]="['/services']" [fragment]="'digital-marketing'" class="btn btn-primary btn-lg">
+                  <span>{{ ts.t().home.digitalGrowthBtn || 'Explore Digital Marketing' }}</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+            <div class="digital-growth-visual">
+              <div class="growth-card-item">
+                <div class="growth-icon-circle">🚀</div>
+                <div class="growth-item-info">
+                  <strong>Digital Visibility & SEO</strong>
+                  <span>Keyword optimization, search ranking & organic traffic</span>
+                </div>
+              </div>
+              <div class="growth-card-item">
+                <div class="growth-icon-circle">🎯</div>
+                <div class="growth-item-info">
+                  <strong>PPC & Targeted Leads</strong>
+                  <span>High-ROI advertising campaigns on search & social channels</span>
+                </div>
+              </div>
+              <div class="growth-card-item">
+                <div class="growth-icon-circle">📈</div>
+                <div class="growth-item-info">
+                  <strong>Social Media & Email</strong>
+                  <span>Audience engagement, brand promotion & automated nurture</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 4. CORE SOLUTIONS GRID -->
       <section class="section-padding solutions-overview-section">
         <div class="container">

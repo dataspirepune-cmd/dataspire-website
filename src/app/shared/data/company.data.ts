@@ -110,7 +110,7 @@ export const APPROACH_STEPS: ApproachStep[] = [
 export const LEADERSHIP_TEAM: TeamMember[] = [
   {
     id: 'ceo',
-    name: 'Executive Leadership',
+    name: 'Kiran Dhumal',
     role: 'Chief Executive Officer (CEO)',
     roleShort: 'CEO',
     image: 'assets/team/ceo.jpg',
@@ -119,7 +119,7 @@ export const LEADERSHIP_TEAM: TeamMember[] = [
   },
   {
     id: 'cto',
-    name: 'Executive Leadership',
+    name: 'Bajrang Gangnar',
     role: 'Co-Founder & Chief Technology Officer (CTO)',
     roleShort: 'Co-Founder & CTO',
     image: 'assets/team/cto.jpg',
@@ -128,13 +128,38 @@ export const LEADERSHIP_TEAM: TeamMember[] = [
   },
   {
     id: 'cio',
-    name: 'Executive Leadership',
+    name: 'Rameshwar Kshirsagar',
     role: 'Chief Information Officer (CIO)',
     roleShort: 'CIO',
     image: 'assets/team/cio.jpg',
     bio: 'Overseeing enterprise information strategy, secure IT governance, cloud systems, and data-driven infrastructure for organizational growth.',
     focus: ['Information Architecture', 'Cloud Governance', 'IT Strategy']
+  },
+  {
+    id: 'marketing-specialist',
+    name: 'Prakash Gavali',
+    role: 'Digital Marketing Specialist',
+    roleShort: 'Marketing Specialist',
+    department: 'Digital Marketing',
+    image: 'assets/team/prakash-gavali.jpg',
+    bio: 'Leading DataSpire’s digital marketing strategy, omni-channel audience growth, search visibility, PPC campaigns, and conversion-focused performance marketing.',
+    focus: [
+      'Digital Marketing Strategy',
+      'SEO & Traffic Analysis',
+      'Social Media Marketing',
+      'PPC & Lead Generation'
+    ],
+    responsibilities: [
+      'Digital Marketing Strategy',
+      'SEO',
+      'Social Media Marketing',
+      'PPC Campaign Management',
+      'Email Marketing',
+      'Content & Campaign Planning',
+      'Website Traffic Analysis',
+      'Lead Generation',
+      'Digital Performance Reporting'
+    ]
   }
-
 ];
 

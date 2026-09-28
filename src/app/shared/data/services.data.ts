@@ -1,6 +1,6 @@
 import { ServiceItem } from '../models/site.models';
 
-export const SERVICES_LIST: ServiceItem[] = [
+export const TECHNOLOGY_SERVICES: ServiceItem[] = [
   {
     id: 'web-app-dev',
     title: 'Web Application Development',
@@ -145,4 +145,102 @@ export const SERVICES_LIST: ServiceItem[] = [
       'Staff refresher training sessions'
     ]
   }
+];
+
+export const DIGITAL_MARKETING_SERVICES: ServiceItem[] = [
+  {
+    id: 'digital-marketing',
+    title: 'Digital Marketing',
+    description: 'Complete digital marketing strategies to improve online visibility, customer engagement, and business growth.',
+    icon: 'trending-up',
+    features: [
+      'Data-driven omni-channel growth & market positioning',
+      'Brand reputation, digital presence & reach management',
+      'Customer acquisition, funnel optimization & conversion rate (CRO)',
+      'Cross-platform performance analytics & ROI attribution'
+    ],
+    deliverables: [
+      'Comprehensive digital growth strategy roadmap',
+      'Target audience segmentation & competitor analysis',
+      'Monthly performance & reach reporting dashboard',
+      'Multi-channel execution & campaign plan'
+    ]
+  },
+  {
+    id: 'seo-services',
+    title: 'Search Engine Optimization (SEO)',
+    description: 'Improve website visibility on search engines through keyword optimization, technical SEO, on-page optimization, and content strategies.',
+    icon: 'search',
+    features: [
+      'Comprehensive technical SEO audit, crawlability & speed optimization',
+      'In-depth keyword research & competitor gap analysis',
+      'On-page content optimization, meta tags & schema markup',
+      'Authority-building link strategies & local search enhancement'
+    ],
+    deliverables: [
+      'Full technical SEO audit & fix roadmap',
+      'Target keyword ranking matrix & competitive report',
+      'Optimized page metadata & structured data schemas',
+      'Monthly organic traffic & search visibility reports'
+    ]
+  },
+  {
+    id: 'social-media-marketing',
+    title: 'Social Media Marketing',
+    description: 'Social media strategy, content planning, audience engagement, and brand promotion across major social platforms.',
+    icon: 'share-2',
+    features: [
+      'Targeted platform strategy (LinkedIn, Instagram, Facebook, X)',
+      'Creative content calendar planning & visual asset direction',
+      'Audience interaction, community management & sentiment tracking',
+      'Brand storytelling, viral campaigns & targeted promotions'
+    ],
+    deliverables: [
+      'Monthly content editorial calendar & graphic creatives',
+      'Branded social media visual templates',
+      'Engagement, reach & community growth analytics',
+      'Audience interaction & messaging runbook'
+    ]
+  },
+  {
+    id: 'ppc-advertising',
+    title: 'PPC (Pay-Per-Click)',
+    description: 'Paid advertising campaigns designed to reach targeted audiences and generate measurable leads and conversions.',
+    icon: 'mouse-pointer',
+    features: [
+      'Google Search, Display Network & YouTube video ad campaigns',
+      'Meta (Facebook/Instagram) & LinkedIn targeted audience ads',
+      'High-converting landing page optimization & persuasive ad copy',
+      'Rigorous A/B split testing for creatives, keywords & bidding'
+    ],
+    deliverables: [
+      'Configured ad campaign accounts & audience segments',
+      'High-impact creative banners & persuasive ad copies',
+      'Conversion tracking pixels & event setup',
+      'ROAS (Return on Ad Spend) & cost-per-lead reports'
+    ]
+  },
+  {
+    id: 'email-marketing',
+    title: 'Email Marketing',
+    description: 'Professional email campaigns, customer communication, promotional campaigns, and automated email strategies.',
+    icon: 'mail',
+    features: [
+      'Subscriber list segmentation & deliverability hygiene',
+      'Responsive, branded HTML email template design',
+      'Automated drip sequences, onboarding & lead nurture workflows',
+      'Subject line A/B testing & click-through rate (CTR) optimization'
+    ],
+    deliverables: [
+      'Custom responsive email templates',
+      'Automated welcome & nurture email workflows',
+      'Promotional newsletter calendar & scheduling',
+      'Open rate, click-through & subscriber engagement reports'
+    ]
+  }
+];
+
+export const SERVICES_LIST: ServiceItem[] = [
+  ...TECHNOLOGY_SERVICES,
+  ...DIGITAL_MARKETING_SERVICES
 ];

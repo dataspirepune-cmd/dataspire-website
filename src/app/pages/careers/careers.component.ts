@@ -44,6 +44,39 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
         </div>
       </section>
 
+      <!-- Team & Department Specialists -->
+      <section class="section-padding team-showcase-section">
+        <div class="container">
+          <app-section-heading
+            badge="Our Dedicated Team"
+            title="Work Alongside Our"
+            highlight="Specialists & Leaders"
+            subtitle="At DataSpire, our software engineers, data architects, and digital marketing specialists work closely together to build and grow high-impact digital solutions."
+            [centered]="true">
+          </app-section-heading>
+
+          <div class="grid-4 team-showcase-grid">
+            <div *ngFor="let member of ts.t().data.leadershipTeam" class="glass-card team-member-card">
+              <div class="member-avatar-box">
+                <img [src]="member.image" [alt]="member.name" class="member-avatar-img" loading="lazy" />
+                <span class="role-badge">{{ member.roleShort }}</span>
+              </div>
+              <div class="member-meta">
+                <h4 class="member-name">{{ member.name }}</h4>
+                <p class="member-role">{{ member.role }}</p>
+                <div *ngIf="member.department" class="member-dept">
+                  <span class="dept-dot"></span>
+                  <span>{{ member.department }}</span>
+                </div>
+                <div class="member-focus-pills">
+                  <span *ngFor="let f of member.focus.slice(0, 3)" class="focus-mini-tag">{{ f }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Open Roles Grid -->
       <section class="section-padding open-roles-section">
         <div class="container">

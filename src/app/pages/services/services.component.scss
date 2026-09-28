@@ -74,8 +74,57 @@
   gap: 2rem;
 }
 
+.service-category-header {
+  margin-bottom: 2.25rem;
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+
+  .category-title {
+    font-size: 2.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 760px;
+    line-height: 1.6;
+  }
+}
+
+.marketing-grid-section {
+  padding-top: 1rem;
+}
+
+.jump-pill.jump-category {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.08);
+  color: #ffffff;
+  font-weight: 700;
+
+  &.marketing-jump {
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(99, 102, 241, 0.1);
+    color: #c7d2fe;
+
+    &:hover {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: #818cf8;
+      color: #ffffff;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .page-hero .page-title {
     font-size: 2.35rem;
+  }
+
+  .service-category-header .category-title {
+    font-size: 1.75rem;
   }
 }

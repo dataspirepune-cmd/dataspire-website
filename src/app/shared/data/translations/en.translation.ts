@@ -1,7 +1,7 @@
 import { SiteTranslation } from '../../models/translation.models';
 import { COMPANY_INFO, WHY_DATASPIRE, COMPANY_STATS, APPROACH_STEPS, LEADERSHIP_TEAM } from '../company.data';
 import { CORE_SOLUTIONS, DETAILED_DOMAIN_SOLUTIONS } from '../solutions.data';
-import { SERVICES_LIST } from '../services.data';
+import { SERVICES_LIST, TECHNOLOGY_SERVICES, DIGITAL_MARKETING_SERVICES } from '../services.data';
 import { INDUSTRIES_LIST } from '../industries.data';
 import { CAREER_POSITIONS } from '../careers.data';
 import { NAV_LINKS, FOOTER_COLUMNS } from '../navigation.data';
@@ -102,6 +102,11 @@ export const EN_TRANSLATION: SiteTranslation = {
     careersTitle: 'Build the Future of Institutional Software With Us',
     careersDesc: 'We are always looking for passionate engineers, analysts, and designers who enjoy solving real-world challenges.',
     careersBtn: 'View Open Roles',
+    digitalGrowthBadge: 'Digital Marketing Services',
+    digitalGrowthTitle: 'Technology + Digital Growth',
+    digitalGrowthSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
+    digitalGrowthText: 'From software and data solutions to digital marketing, DataSpire helps organizations build better technology and strengthen their digital presence.',
+    digitalGrowthBtn: 'Explore Digital Marketing',
     ctaBadge: 'Connect With Our Architects',
     ctaTitle: 'Transform Your Operations With DataSpire Today',
     ctaDesc: "Whether you represent a college, cooperative bank, or growing business, let's discuss how our data and technology solutions can elevate your operations.",
@@ -151,6 +156,7 @@ export const EN_TRANSLATION: SiteTranslation = {
       { label: '👥 Staff & HR', fragment: 'staff-hr-management' },
       { label: '💼 Small Business', fragment: 'small-business-solutions' },
       { label: '🏦 Co-op Banking MIS', fragment: 'cooperative-banking-solutions' },
+      { label: '🚀 Digital Marketing', fragment: 'digital-marketing-growth' },
       { label: '⚡ Core Capabilities', fragment: 'core-solutions' }
     ],
     suitesBadge: 'Institutional Suites',
@@ -164,14 +170,25 @@ export const EN_TRANSLATION: SiteTranslation = {
     coreBadge: 'Modular Technology Components',
     coreTitle: 'Cross-Functional',
     coreTitleHighlight: 'Technology Capabilities',
-    coreSubtitle: 'Reusable enterprise building blocks that power our platforms and can be integrated into your existing systems.'
+    coreSubtitle: 'Reusable enterprise building blocks that power our platforms and can be integrated into your existing systems.',
+    marketingSuiteBadge: 'Digital Marketing Services',
+    marketingSuiteTitle: 'Digital Marketing & Growth Solutions',
+    marketingSuiteSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
+    marketingSuiteDesc: 'DataSpire empowers schools, colleges, educational institutions, small & medium businesses, and organizations with end-to-end digital marketing solutions. From organic search authority to performance PPC advertising, we connect your brand to the right audience and convert visibility into measurable institutional growth.',
+    marketingSuiteBtn: 'Explore Digital Marketing Services'
   },
   services: {
-    heroBadge: 'Engineering & Analytics Services',
-    heroTitle: 'Enterprise Services for',
-    heroTitleHighlight: 'Digital Excellence',
-    heroLead: 'From modern web engineering and bespoke enterprise software to high-throughput data pipelines and 24/7 infrastructure management, we deliver end-to-end technology execution.',
-    jumpLabel: 'Jump to Service:'
+    heroBadge: 'Engineering, Analytics & Digital Marketing Services',
+    heroTitle: 'Comprehensive Services for',
+    heroTitleHighlight: 'Technology & Digital Growth',
+    heroLead: 'From modern web engineering and bespoke software to high-throughput data pipelines and result-driven digital marketing strategies, we deliver end-to-end technology execution.',
+    jumpLabel: 'Jump to Service:',
+    techBadge: 'Core Technology Capabilities',
+    techTitle: 'Technology Services',
+    techSubtitle: 'Enterprise-grade software, cloud infrastructure, and data systems engineered for performance and security.',
+    marketingBadge: 'Digital Marketing Services',
+    marketingTitle: 'Digital Marketing Services',
+    marketingSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.'
   },
   industries: {
     heroBadge: 'Target Sectors & Verticals',
@@ -186,7 +203,11 @@ export const EN_TRANSLATION: SiteTranslation = {
       { num: '01', title: 'Zero Workflow Compromise', desc: 'We build features that map 100% to your existing hierarchy, designations, and departmental permissions.' },
       { num: '02', title: 'Regulatory Compliance', desc: 'Pre-configured reporting formats that align with university mandates, cooperative registrar filings, and tax laws.' },
       { num: '03', title: 'Faster Time-to-Adoption', desc: 'Intuitive user journeys that allow faculty, branch managers, and office clerks to master the software within days.' }
-    ]
+    ],
+    marketingBadge: 'Digital Marketing Services',
+    marketingTitle: 'Digital Marketing Services for Every Sector',
+    marketingSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
+    marketingDesc: 'From software solutions to targeted digital outreach, DataSpire supports educational institutions, schools, colleges, small & medium businesses, and organizations with specialized digital growth strategies.'
   },
   careers: {
     heroBadge: 'Join Our Engineering & Analytics Team',
@@ -299,6 +320,8 @@ export const EN_TRANSLATION: SiteTranslation = {
     coreSolutions: CORE_SOLUTIONS,
     domainSuites: DETAILED_DOMAIN_SOLUTIONS,
     servicesList: SERVICES_LIST,
+    techServicesList: TECHNOLOGY_SERVICES,
+    marketingServicesList: DIGITAL_MARKETING_SERVICES,
     industriesList: INDUSTRIES_LIST,
     careerPositions: CAREER_POSITIONS,
     leadershipTeam: LEADERSHIP_TEAM

@@ -24,7 +24,12 @@ export const NAV_LINKS: NavItem[] = [
       { label: 'Data Analytics & Visualization', route: '/services', fragment: 'analytics-visualization', description: 'Interactive visual dashboards' },
       { label: 'Cloud & Infrastructure', route: '/services', fragment: 'cloud-infrastructure', description: 'Secure, high-uptime cloud' },
       { label: 'API & System Integration', route: '/services', fragment: 'api-integration', description: 'Connect legacy systems & APIs' },
-      { label: 'Process Automation', route: '/services', fragment: 'automation-services', description: 'Automate repetitive workflows' }
+      { label: 'Process Automation', route: '/services', fragment: 'automation-services', description: 'Automate repetitive workflows' },
+      { label: 'Digital Marketing', route: '/services', fragment: 'digital-marketing', description: 'Complete digital growth strategies' },
+      { label: 'SEO (Search Optimization)', route: '/services', fragment: 'seo-services', description: 'Keyword rankings & organic search' },
+      { label: 'Social Media Marketing', route: '/services', fragment: 'social-media-marketing', description: 'Audience engagement & brand growth' },
+      { label: 'PPC (Pay-Per-Click)', route: '/services', fragment: 'ppc-advertising', description: 'Targeted lead conversion ads' },
+      { label: 'Email Marketing', route: '/services', fragment: 'email-marketing', description: 'Automated email campaigns' }
     ]
   },
   { 
@@ -74,7 +79,8 @@ export const FOOTER_COLUMNS = {
       { label: 'Data Analytics & Visualization', route: '/services', fragment: 'analytics-visualization' },
       { label: 'Cloud & Infrastructure', route: '/services', fragment: 'cloud-infrastructure' },
       { label: 'Process Automation', route: '/services', fragment: 'automation-services' },
-      { label: 'API & System Integration', route: '/services', fragment: 'api-integration' }
+      { label: 'Digital Marketing', route: '/services', fragment: 'digital-marketing' },
+      { label: 'SEO & Search Optimization', route: '/services', fragment: 'seo-services' }
     ]
   }
 };

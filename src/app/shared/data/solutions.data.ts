@@ -208,5 +208,28 @@ export const DETAILED_DOMAIN_SOLUTIONS: SolutionItem[] = [
       'Strengthen audit compliance with comprehensive activity logs and user permissions',
       'Equip Board of Directors and CEOs with instant decision-support dashboards'
     ]
+  },
+  {
+    id: 'digital-marketing-growth',
+    title: 'Digital Marketing & Growth Solutions',
+    subtitle: 'For Educational Institutions, Colleges, Schools, SMBs & Organizations',
+    description: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth. We provide high-impact, data-driven marketing campaigns tailored to institutional admissions, small business customer acquisition, and enterprise brand authority.',
+    icon: 'trending-up',
+    badge: 'Digital Marketing Services',
+    modules: [
+      'Comprehensive Digital Marketing Strategy & Execution',
+      'Search Engine Optimization (SEO) & Technical Audits',
+      'Social Media Marketing & Brand Promotion across Major Platforms',
+      'PPC (Pay-Per-Click) Advertising & Targeted Lead Generation',
+      'Automated Email Marketing & Student/Customer Drip Campaigns',
+      'Content Planning & Institutional Admissions Campaigns',
+      'Website Traffic Analytics & Conversion Funnel Optimization',
+      'Multi-Channel Digital Performance & ROI Reporting'
+    ],
+    benefits: [
+      'Attract prospective students and parents for educational institutions, schools & colleges',
+      'Generate high-intent commercial leads and conversions for small and medium businesses',
+      'Establish strong organic search rankings and trusted brand credibility across digital channels'
+    ]
   }
 ];

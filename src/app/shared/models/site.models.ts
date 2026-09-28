@@ -79,5 +79,7 @@ export interface TeamMember {
   image: string;
   bio: string;
   focus: string[];
+  department?: string;
+  responsibilities?: string[];
 }
 

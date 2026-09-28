@@ -70,7 +70,7 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
           <div class="leadership-grid">
             <div *ngFor="let member of ts.t().data.leadershipTeam" class="leadership-card glass-card">
               <div class="member-image-wrapper">
-                <img [src]="member.image" [alt]="member.role" class="member-image" loading="lazy" />
+                <img [src]="member.image" [alt]="member.name" class="member-image" loading="lazy" />
                 <div class="image-gradient-overlay"></div>
                 <div class="member-role-badge">
                   <span>{{ member.roleShort }}</span>
@@ -78,7 +78,8 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
               </div>
 
               <div class="member-info">
-                <h3 class="member-role-title">{{ member.role }}</h3>
+                <h3 class="member-name">{{ member.name }}</h3>
+                <p class="member-role-title">{{ member.role }}</p>
                 <p class="member-bio">{{ member.bio }}</p>
                 <div class="member-focus-tags">
                   <span *ngFor="let tag of member.focus" class="focus-pill">{{ tag }}</span>
