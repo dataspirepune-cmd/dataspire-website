@@ -338,7 +338,7 @@ export const HI_TRANSLATION: SiteTranslation = {
     directHotline: 'सीधा फोन / व्हाट्सएप',
     ctaMicro: 'क्या आप अपनी संस्था को डिजिटल बनाने के लिए तैयार हैं?',
     scheduleConsultationBtn: 'परामर्श सत्र शेड्यूल करें',
-    copyright: '© 2026 DataSpire. सर्वाधिकार सुरक्षित।',
+    copyright: 'सर्वाधिकार सुरक्षित।',
     privacy: 'गोपनीयता नीति',
     terms: 'सेवा की शर्तें',
     security: 'सुरक्षा मानक',

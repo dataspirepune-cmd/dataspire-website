@@ -297,7 +297,7 @@ export const EN_TRANSLATION: SiteTranslation = {
     directHotline: 'Direct Hotline',
     ctaMicro: 'Ready to transform your organization?',
     scheduleConsultationBtn: 'Schedule Consultation',
-    copyright: '© 2026 DataSpire. All Rights Reserved.',
+    copyright: 'All Rights Reserved.',
     privacy: 'Enterprise Privacy Policy',
     terms: 'Terms of Service',
     security: 'Security Standards',

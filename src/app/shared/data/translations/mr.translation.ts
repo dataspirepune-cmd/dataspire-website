@@ -338,7 +338,7 @@ export const MR_TRANSLATION: SiteTranslation = {
     directHotline: 'थेट फोन / व्हॉट्सॲप',
     ctaMicro: 'तुमच्या संस्थेचे डिजिटल परिवर्तन करण्यास तयार आहात?',
     scheduleConsultationBtn: 'सल्लामसलत सत्र ठरवा',
-    copyright: '© २०२६ DataSpire. सर्व हक्क राखीव.',
+    copyright: 'सर्व हक्क राखीव.',
     privacy: 'गोपनीयता धोरण',
     terms: 'वापराच्या अटी',
     security: 'सुरक्षा मानके',
