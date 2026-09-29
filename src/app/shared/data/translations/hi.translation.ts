@@ -48,7 +48,7 @@ export const HI_TRANSLATION: SiteTranslation = {
           { label: 'एंटरप्राइज संगठन', route: '/industries', fragment: 'enterprise-organizations', description: 'बड़े पैमाने की प्रणालियां' }
         ]
       },
-      { label: 'करियर', route: '/careers', badge: 'भर्ती जारी' },
+      { label: 'करियर', route: '/careers' },
       { label: 'संपर्क', route: '/contact' }
     ],
     cta: 'बातचीत करें',
@@ -139,10 +139,10 @@ export const HI_TRANSLATION: SiteTranslation = {
     whyTitle: 'प्रमुख संस्थान',
     whyTitleHighlight: 'डेटास्पायर पर भरोसा क्यों करते हैं?',
     whySubtitle: 'हम केवल सॉफ्टवेयर कोड नहीं बनाते, बल्कि आपके संस्थान के दीर्घकालिक प्रौद्योगिकी भागीदार बनते हैं।',
-    careersHiringBadge: 'भर्ती जारी है',
-    careersTitle: 'हमारे साथ संस्थागत सॉफ्टवेयर का भविष्य बनाएं',
-    careersDesc: 'हम ऐसे उत्साही लोगों की तलाश में हैं जो तकनीक से वास्तविक दुनिया की समस्याओं को हल करना पसंद करते हैं।',
-    careersBtn: 'खुले पद देखें',
+    careersHiringBadge: 'करियर एवं कार्यसंस्कृति',
+    careersTitle: 'डेटास्पायर में कार्यसंस्कृति और भविष्य के अवसर',
+    careersDesc: 'वर्तमान में हमारे पास कोई सक्रिय भर्ती उपलब्ध नहीं है, परंतु भविष्य के अवसरों के लिए हम उत्कृष्ट प्रतिभाओं का सदैव स्वागत करते हैं।',
+    careersBtn: 'करियर पेज देखें',
     digitalGrowthBadge: 'डिजिटल मार्केटिंग सेवाएं',
     digitalGrowthTitle: 'Technology + Digital Growth',
     digitalGrowthSubtitle: 'Build your digital presence, reach the right audience, and turn online visibility into measurable growth.',
@@ -251,19 +251,26 @@ export const HI_TRANSLATION: SiteTranslation = {
     marketingDesc: 'शैक्षणिक संस्थानों, स्कूलों, कॉलेजों, छोटे व मध्यम व्यवसायों और संगठनों के लिए विशेष डिजिटल विकास रणनीति।'
   },
   careers: {
-    heroBadge: 'हमारी इंजीनियरिंग और एनालिटिक्स टीम से जुड़ें',
+    heroBadge: 'डेटास्पायर में करियर',
     heroTitle: 'डेटास्पायर के साथ बनाएं',
     heroTitleHighlight: 'उज्ज्वल भविष्य',
-    heroLead: 'हम ऐसे लोगों की तलाश कर रहे हैं जो तकनीक के साथ वास्तविक समस्याओं को हल करना पसंद करते हैं। डेटा और आधुनिक वेब ऐप्स की दुनिया में हमारे साथ काम करें।',
+    heroLead: 'हमारी कार्यसंस्कृति, तकनीक के प्रति हमारा समर्पण और आधुनिक समाधानों के निर्माण की यात्रा को जानें।',
     cultureItems: [
       { icon: '💡', title: 'वास्तविक संस्थागत प्रभाव', desc: 'आपका कोड प्रतिदिन हजारों छात्रों, शिक्षकों, बैंक अधिकारियों और प्रबंधकों द्वारा उपयोग किया जाएगा।' },
       { icon: '🚀', title: 'आधुनिक टेक स्टैक', desc: 'नवीनतम Angular, TypeScript, Node.js, क्लाउड और डेटा विज़ुअलाइज़ेशन टूल्स पर काम करें।' },
       { icon: '🌱', title: 'निरंतर सीखने का अवसर', desc: 'मार्गदर्शन, कोड समीक्षा, वास्तुशिल्प स्वामित्व और पेशेवर विकास की संस्कृति।' }
     ],
-    openingsBadge: 'सक्रिय पद (9 पद)',
-    openingsTitle: 'डेटास्पायर में',
-    openingsTitleHighlight: 'उपलब्ध अवसर',
-    openingsSubtitle: 'हमारे इंजीनियरिंग, डिजाइन, एनालिटिक्स और सपोर्ट के अवसरों को देखें।',
+    openingsBadge: 'भर्ती की स्थिति',
+    openingsTitle: 'वर्तमान में कोई रिक्त पद या सक्रिय भर्ती नहीं है',
+    openingsTitleHighlight: '(No Current Openings)',
+    openingsSubtitle: 'इस समय डेटास्पायर में कोई खुली भर्ती या रिक्त पद उपलब्ध नहीं हैं।',
+    noOpeningsBadge: 'भर्ती स्थिति',
+    noOpeningsTitle: 'वर्तमान में कोई खुली भर्ती या रिक्त पद उपलब्ध नहीं है',
+    noOpeningsTitleHighlight: 'भर्ती बंद',
+    noOpeningsSubtitle: 'इस समय डेटास्पायर में कोई रिक्त पद उपलब्ध नहीं हैं।',
+    noOpeningsDesc: 'हमारी टीम वर्तमान में पूर्ण क्षमता के साथ कार्यरत है। डेटास्पायर के प्रति आपकी रुचि के लिए धन्यवाद। भविष्य के अवसरों के लिए आप अपना बायोडाटा (Resume) हमें भेज सकते हैं। उपयुक्त पद खुलने पर हमारी टीम आपसे संपर्क करेगी।',
+    noOpeningsNote: 'अपना रेज़्यूमे careers@dataspire.in पर भेजें।',
+    futureOpportunitiesBtn: 'भविष्य के अवसरों के लिए रेज़्यूमे भेजें',
     applyModal: {
       titlePrefix: 'आवेदन करें:',
       instructions: 'इस पद के लिए आवेदन करने के लिए कृपया अपना रिज्यूमे (Resume) नीचे दिए गए ईमेल पर भेजें:',

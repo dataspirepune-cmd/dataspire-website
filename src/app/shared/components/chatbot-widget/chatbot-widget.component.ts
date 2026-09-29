@@ -397,12 +397,12 @@ export class ChatbotWidgetComponent implements OnInit, AfterViewChecked {
     // 6. Careers / Jobs
     else if (input.includes('job') || input.includes('career') || input.includes('hiring') || input.includes('opening') || input.includes('नोकरी') || input.includes('करिअर') || input.includes('भर्ती')) {
       reply = lang === 'mr'
-        ? `🚀 डेटास्पायरमध्ये Frontend, Backend, Data Analytics, QA आणि DevOps साठी पदे उपलब्ध आहेत! अर्ज करण्यासाठी आपला बायोडाटा **dataspirepune@gmail.com** वर पाठवा.`
+        ? `💼 **डेटास्पायर करिअर अपडेट**:\nसध्या आमच्याकडे कोणतीही नवीन पदभरती किंवा ओपनिंग उपलब्ध नाही.\n\nभविष्यातील संधींसाठी आपण आपला बायोडाटा **careers@dataspire.in** वर पाठवू शकता.`
         : (lang === 'hi'
-            ? `🚀 डेटास्पायर में Frontend, Backend, Data Analytics, QA और DevOps पदों के लिए अवसर उपलब्ध हैं! आवेदन करने हेतु अपना रिज्यूमे **dataspirepune@gmail.com** पर भेजें।`
-            : `🚀 We have active openings for Frontend Developers, Backend Engineers, Data Analysts, QA, and Cloud DevOps! Email your resume to **dataspirepune@gmail.com**.`);
+            ? `💼 **डेटास्पायर करियर अपडेट**:\nवर्तमान में हमारे यहाँ कोई सक्रिय रिक्त पद या भर्ती उपलब्ध नहीं है।\n\nभविष्य के अवसरों के लिए आप अपना बायोडाटा **careers@dataspire.in** पर भेज सकते हैं।`
+            : `💼 **DataSpire Careers Update**:\nThere are currently no active openings or hirings at this time.\n\nHowever, you are welcome to send your resume for future opportunities to **careers@dataspire.in**.`);
       linkUrl = '/careers';
-      linkLabel = lang === 'mr' ? 'उपलब्ध पदे पहा' : (lang === 'hi' ? 'खुले पद देखें' : 'View Open Roles');
+      linkLabel = lang === 'mr' ? 'करिअर पेज पहा' : (lang === 'hi' ? 'करियर पेज देखें' : 'View Careers Page');
     }
     // Default fallback response
     else {

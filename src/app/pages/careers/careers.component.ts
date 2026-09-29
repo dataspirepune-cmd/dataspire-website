@@ -4,15 +4,13 @@ import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/seo.service';
 import { TranslationService } from '../../core/translation.service';
 import { COMPANY_INFO } from '../../shared/data/company.data';
-import { JobPosition } from '../../shared/models/site.models';
 import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
-import { JobCardComponent } from '../../shared/components/job-card/job-card.component';
 import { CtaSectionComponent } from '../../shared/components/cta-section/cta-section.component';
 
 @Component({
   selector: 'app-careers',
   standalone: true,
-  imports: [CommonModule, RouterLink, SectionHeadingComponent, JobCardComponent, CtaSectionComponent],
+  imports: [CommonModule, RouterLink, SectionHeadingComponent, CtaSectionComponent],
   template: `
     <main class="careers-page">
       <!-- Hero -->
@@ -44,103 +42,56 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
         </div>
       </section>
 
-      <!-- Team & Department Specialists -->
-      <section class="section-padding team-showcase-section">
+      <!-- Hiring Status / No Current Openings Section -->
+      <section class="section-padding no-openings-section">
         <div class="container">
           <app-section-heading
-            badge="Our Dedicated Team"
-            title="Work Alongside Our"
-            highlight="Specialists & Leaders"
-            subtitle="At DataSpire, our software engineers, data architects, and digital marketing specialists work closely together to build and grow high-impact digital solutions."
+            [badge]="ts.t().careers.noOpeningsBadge || 'Hiring Status'"
+            [title]="ts.t().careers.noOpeningsTitle || 'Currently No Openings or'"
+            [highlight]="ts.t().careers.noOpeningsTitleHighlight || 'Active Hirings'"
+            [subtitle]="ts.t().careers.noOpeningsSubtitle || 'We do not have any open vacancies or active hiring positions at this time.'"
             [centered]="true">
           </app-section-heading>
 
-          <div class="grid-4 team-showcase-grid">
-            <div *ngFor="let member of ts.t().data.leadershipTeam" class="glass-card team-member-card">
-              <div class="member-avatar-box">
-                <img [src]="member.image" [alt]="member.name" class="member-avatar-img" loading="lazy" />
-                <span class="role-badge">{{ member.roleShort }}</span>
-              </div>
-              <div class="member-meta">
-                <h4 class="member-name">{{ member.name }}</h4>
-                <p class="member-role">{{ member.role }}</p>
-                <div *ngIf="member.department" class="member-dept">
-                  <span class="dept-dot"></span>
-                  <span>{{ member.department }}</span>
-                </div>
-                <div class="member-focus-pills">
-                  <span *ngFor="let f of member.focus.slice(0, 3)" class="focus-mini-tag">{{ f }}</span>
-                </div>
-              </div>
+          <div class="glass-card no-openings-card">
+            <div class="no-openings-icon-badge">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
             </div>
-          </div>
-        </div>
-      </section>
+            
+            <h3 class="no-openings-headline">
+              {{ ts.t().careers.noOpeningsTitle || 'Currently No Openings or Active Hirings' }}
+            </h3>
 
-      <!-- Open Roles Grid -->
-      <section class="section-padding open-roles-section">
-        <div class="container">
-          <app-section-heading
-            [badge]="ts.t().careers.openingsBadge"
-            [title]="ts.t().careers.openingsTitle"
-            [highlight]="ts.t().careers.openingsTitleHighlight"
-            [subtitle]="ts.t().careers.openingsSubtitle"
-            [centered]="true">
-          </app-section-heading>
-
-          <div class="grid-2 jobs-grid">
-            <app-job-card 
-              *ngFor="let job of ts.t().data.careerPositions" 
-              [job]="job" 
-              (apply)="openApplyModal($event)">
-            </app-job-card>
-          </div>
-        </div>
-      </section>
-
-      <!-- Application Modal / Drawer -->
-      <div *ngIf="selectedJob" class="modal-backdrop" (click)="closeApplyModal()">
-        <div class="modal-card" (click)="$event.stopPropagation()">
-          <button class="modal-close" (click)="closeApplyModal()">&times;</button>
-          
-          <div class="modal-header">
-            <span class="pill-badge">{{ selectedJob.department }}</span>
-            <h2>{{ ts.t().careers.applyModal.titlePrefix }} {{ selectedJob.title }}</h2>
-            <p class="modal-sub">{{ selectedJob.location }} • {{ selectedJob.experience }}</p>
-          </div>
-
-          <div class="modal-body">
-            <p class="apply-instructions">
-              {{ ts.t().careers.applyModal.instructions }}
+            <p class="no-openings-text">
+              {{ ts.t().careers.noOpeningsDesc || 'Our team is currently at full capacity. We sincerely thank you for your interest in joining DataSpire. While there are no current openings, we always welcome exceptional talent. You are invited to send your resume for future opportunities, and our recruitment team will reach out when a suitable position becomes available.' }}
             </p>
 
-            <div class="email-box">
-              <span class="box-label">{{ ts.t().careers.applyModal.emailLabel }}</span>
-              <a [href]="'mailto:' + company.contact.inquiries.careers + '?subject=Application for ' + selectedJob.title" class="career-mail-link">
-                {{ company.contact.inquiries.careers }}
+            <div class="future-resume-box">
+              <div class="future-resume-info">
+                <span class="box-label">{{ ts.t().careers.noOpeningsNote || 'Future Opportunities & General Submissions:' }}</span>
+                <a [href]="'mailto:' + company.contact.inquiries.careers + '?subject=Resume Submission - Future Opportunities'" class="career-mail-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>{{ company.contact.inquiries.careers }}</span>
+                </a>
+              </div>
+              <a [href]="'mailto:' + company.contact.inquiries.careers + '?subject=Resume Submission - Future Opportunities'" class="btn btn-primary btn-lg">
+                <span>{{ ts.t().careers.futureOpportunitiesBtn || 'Send Resume for Future Openings' }}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
-
-            <div class="tips-box">
-              <strong>Tip:</strong> {{ ts.t().careers.applyModal.tip }}
-            </div>
-          </div>
-
-          <div class="modal-actions">
-            <a [href]="'mailto:' + company.contact.inquiries.careers + '?subject=Application for ' + selectedJob.title" class="btn btn-primary w-full">
-              <span>{{ ts.t().careers.applyModal.openEmailBtn }}</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- CTA -->
       <app-cta-section
         [badge]="ts.t().home.ctaBadge"
         [title]="ts.t().home.ctaTitle"
         [description]="ts.t().home.ctaDesc"
-        [primaryLabel]="ts.t().careers.applyModal.openEmailBtn"
+        [primaryLabel]="ts.t().home.ctaPrimaryBtn"
         primaryLink="/contact"
         [secondaryLabel]="ts.t().home.ctaSecondaryBtn"
         secondaryLink="/about">
@@ -152,23 +103,14 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
 export class CareersComponent implements OnInit {
   ts = inject(TranslationService);
   company = COMPANY_INFO;
-  selectedJob: JobPosition | null = null;
 
   constructor(private seo: SeoService) {}
 
   ngOnInit(): void {
     this.seo.updateSeo({
-      title: 'Careers | Build the Future With DataSpire',
-      description: 'Explore engineering, data analysis, UI/UX design, cloud and QA career opportunities at DataSpire Pune.',
-      keywords: 'DataSpire Careers, Frontend Developer, Backend Developer, Data Analyst, Cloud DevOps Engineer, Pune Tech Jobs'
+      title: 'Careers | Life & Opportunities at DataSpire',
+      description: 'Learn about culture and future opportunities at DataSpire. While there are currently no active openings, we welcome future resume submissions.',
+      keywords: 'DataSpire Careers, Software Engineering Culture, Future Tech Opportunities, Pune Tech'
     });
-  }
-
-  openApplyModal(job: JobPosition): void {
-    this.selectedJob = job;
-  }
-
-  closeApplyModal(): void {
-    this.selectedJob = null;
   }
 }

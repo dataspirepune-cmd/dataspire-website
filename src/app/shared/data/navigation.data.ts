@@ -44,7 +44,7 @@ export const NAV_LINKS: NavItem[] = [
       { label: 'Enterprise Organizations', route: '/industries', fragment: 'enterprise-organizations', description: 'Corporate & large organizations' }
     ]
   },
-  { label: 'Careers', route: '/careers', badge: 'Hiring' },
+  { label: 'Careers', route: '/careers' },
   { label: 'Contact', route: '/contact' }
 ];
 

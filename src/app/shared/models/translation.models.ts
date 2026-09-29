@@ -167,6 +167,13 @@ export interface SiteTranslation {
     openingsTitle: string;
     openingsTitleHighlight: string;
     openingsSubtitle: string;
+    noOpeningsBadge?: string;
+    noOpeningsTitle?: string;
+    noOpeningsTitleHighlight?: string;
+    noOpeningsSubtitle?: string;
+    noOpeningsDesc?: string;
+    noOpeningsNote?: string;
+    futureOpportunitiesBtn?: string;
     applyModal: {
       titlePrefix: string;
       instructions: string;
