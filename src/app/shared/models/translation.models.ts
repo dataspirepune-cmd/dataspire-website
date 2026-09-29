@@ -72,6 +72,23 @@ export interface SiteTranslation {
     digitalGrowthSubtitle?: string;
     digitalGrowthText?: string;
     digitalGrowthBtn?: string;
+    teamShowcase?: {
+      badge: string;
+      title: string;
+      titleHighlight: string;
+      subtitle: string;
+      squadBadge: string;
+      squadSub: string;
+      locationBadge: string;
+      locationSub: string;
+      statsSpecialists: string;
+      statsSpecialistsLabel: string;
+      statsAccess: string;
+      statsAccessLabel: string;
+      statsMethod: string;
+      statsMethodLabel: string;
+      btnText: string;
+    };
     ctaBadge: string;
     ctaTitle: string;
     ctaDesc: string;

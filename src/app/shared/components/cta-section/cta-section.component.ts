@@ -127,6 +127,21 @@ import { RouterLink } from '@angular/router';
         font-size: 1.75rem;
       }
     }
+
+    @media (max-width: 540px) {
+      .cta-glass-banner {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+
+        .btn {
+          width: 100%;
+          flex: none;
+        }
+      }
+    }
   `]
 })
 export class CtaSectionComponent {

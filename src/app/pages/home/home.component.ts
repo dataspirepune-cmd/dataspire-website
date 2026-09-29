@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/seo.service';
@@ -201,6 +201,83 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
         </div>
       </section>
 
+      <!-- 3.2. TEAM & COLLABORATIVE CULTURE SHOWCASE -->
+      <section class="section-padding team-showcase-section">
+        <div class="container">
+          <app-section-heading
+            [badge]="ts.t().home.teamShowcase?.badge || 'Collaborative Excellence'"
+            [title]="ts.t().home.teamShowcase?.title || 'Real People. Direct Collaboration.'"
+            [highlight]="ts.t().home.teamShowcase?.titleHighlight || 'Measurable Impact'"
+            [subtitle]="ts.t().home.teamShowcase?.subtitle || 'Technology succeeds when people collaborate seamlessly. Our multidisciplinary engineers, cloud architects, and data strategists work directly alongside your leadership from inception to deployment.'"
+            [centered]="true">
+          </app-section-heading>
+
+          <div class="team-showcase-visual-wrapper">
+            <div class="team-ambient-glow"></div>
+            
+            <div class="team-frame">
+              <!-- Full Size Image Element -->
+              <div class="team-image-viewport">
+                <img
+                  src="assets/images/team-collaboration.jpg"
+                  alt="DataSpire Collaborative Engineering Team in Action"
+                  class="team-img-full"
+                  loading="lazy"
+                />
+                
+                <!-- Modern Dark Vignette & Depth Gradients -->
+                <div class="image-scrim-top"></div>
+                <div class="image-scrim-bottom"></div>
+
+                <!-- Floating Badge: Top Left -->
+                <div class="floating-chip chip-squad">
+                  <span class="live-pulse-dot"></span>
+                  <div class="chip-text">
+                    <strong>{{ ts.t().home.teamShowcase?.squadBadge || 'Agile Squad in Action' }}</strong>
+                    <span>{{ ts.t().home.teamShowcase?.squadSub || 'Cross-functional sprint session' }}</span>
+                  </div>
+                </div>
+
+                <!-- Floating Badge: Top Right -->
+                <div class="floating-chip chip-location">
+                  <div class="chip-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="chip-text">
+                    <strong>{{ ts.t().home.teamShowcase?.locationBadge || 'Pune Innovation Center' }}</strong>
+                    <span>{{ ts.t().home.teamShowcase?.locationSub || 'Serving clients nationwide' }}</span>
+                  </div>
+                </div>
+
+                <!-- Floating Bottom Highlights Bar -->
+                <div class="floating-highlights-bar">
+                  <div class="highlight-item">
+                    <span class="h-value text-gradient">{{ ts.t().home.teamShowcase?.statsSpecialists || '30+' }}</span>
+                    <span class="h-label">{{ ts.t().home.teamShowcase?.statsSpecialistsLabel || 'Tech Specialists' }}</span>
+                  </div>
+                  <div class="h-separator"></div>
+                  <div class="highlight-item">
+                    <span class="h-value text-cyan">{{ ts.t().home.teamShowcase?.statsAccess || '100%' }}</span>
+                    <span class="h-label">{{ ts.t().home.teamShowcase?.statsAccessLabel || 'Direct Engineering Access' }}</span>
+                  </div>
+                  <div class="h-separator"></div>
+                  <div class="highlight-item">
+                    <span class="h-value text-gradient">{{ ts.t().home.teamShowcase?.statsMethod || 'Sprint-Based' }}</span>
+                    <span class="h-label">{{ ts.t().home.teamShowcase?.statsMethodLabel || 'Transparent Delivery' }}</span>
+                  </div>
+                  <div class="h-action">
+                    <a routerLink="/about" class="btn btn-primary btn-sm">
+                      <span>{{ ts.t().home.teamShowcase?.btnText || 'Meet Our Team' }}</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 3.5. TECHNOLOGY + DIGITAL GROWTH SECTION -->
       <section class="section-padding digital-growth-section">
         <div class="container">
@@ -260,19 +337,71 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
         </div>
       </section>
 
-      <!-- 4. CORE SOLUTIONS GRID -->
+      <!-- 4. CORE SOLUTIONS SLIDER -->
       <section class="section-padding solutions-overview-section">
         <div class="container">
-          <app-section-heading
-            [badge]="ts.t().home.solutionsBadge"
-            [title]="ts.t().home.solutionsTitle"
-            [highlight]="ts.t().home.solutionsTitleHighlight"
-            [subtitle]="ts.t().home.solutionsSubtitle"
-            [centered]="true">
-          </app-section-heading>
+          <div class="section-heading-with-controls">
+            <app-section-heading
+              [badge]="ts.t().home.solutionsBadge"
+              [title]="ts.t().home.solutionsTitle"
+              [highlight]="ts.t().home.solutionsTitleHighlight"
+              [subtitle]="ts.t().home.solutionsSubtitle"
+              [centered]="false">
+            </app-section-heading>
 
-          <div class="grid-4 solutions-grid">
-            <app-solution-card *ngFor="let sol of ts.t().data.coreSolutions" [solution]="sol"></app-solution-card>
+            <!-- Top Slider Controls -->
+            <div class="slider-header-actions">
+              <div class="slider-live-badge">
+                <span class="live-dot" [class.paused]="isSolPaused"></span>
+                <span>{{ isSolPaused ? 'Paused' : 'Auto-Looping' }}</span>
+              </div>
+              <div class="slider-btn-group">
+                <button class="slider-nav-btn" (click)="prevSol()" aria-label="Previous Solutions" title="Previous Slide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="slider-nav-btn" (click)="nextSol()" aria-label="Next Solutions" title="Next Slide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Viewport and Track -->
+          <div class="carousel-slider-wrapper" 
+               (mouseenter)="pauseSol()" 
+               (mouseleave)="resumeSol()"
+               (touchstart)="onTouchStart($event)"
+               (touchend)="onTouchEnd($event, 'sol')">
+            
+            <!-- Side Navigation Arrows -->
+            <button class="side-arrow arrow-prev" (click)="prevSol()" aria-label="Previous Slide">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="side-arrow arrow-next" (click)="nextSol()" aria-label="Next Slide">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <div class="carousel-viewport">
+              <div class="carousel-track" 
+                   [class.no-transition]="solNoTransition"
+                   [style.transform]="'translate3d(' + solTranslateX + ', 0, 0)'"
+                   (transitionend)="onSolTransitionEnd()">
+                <div *ngFor="let sol of displaySolutions; let idx = index" class="carousel-slide sol-slide">
+                  <app-solution-card [solution]="sol"></app-solution-card>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Pagination Dots -->
+            <div class="carousel-pagination">
+              <button *ngFor="let sol of solutionsList; let i = index" 
+                      class="page-indicator-pill" 
+                      [class.active]="solNormalizedIndex === i"
+                      (click)="goToSol(i)"
+                      [attr.aria-label]="'Go to solution ' + (i + 1)">
+                <span class="indicator-bar"></span>
+              </button>
+            </div>
           </div>
 
           <div class="section-bottom-cta">
@@ -284,19 +413,71 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
         </div>
       </section>
 
-      <!-- 5. INDUSTRIES SHOWCASE -->
+      <!-- 5. INDUSTRIES SHOWCASE SLIDER -->
       <section class="section-padding industries-showcase-section">
         <div class="container">
-          <app-section-heading
-            [badge]="ts.t().home.industriesBadge"
-            [title]="ts.t().home.industriesTitle"
-            [highlight]="ts.t().home.industriesTitleHighlight"
-            [subtitle]="ts.t().home.industriesSubtitle"
-            [centered]="true">
-          </app-section-heading>
+          <div class="section-heading-with-controls">
+            <app-section-heading
+              [badge]="ts.t().home.industriesBadge"
+              [title]="ts.t().home.industriesTitle"
+              [highlight]="ts.t().home.industriesTitleHighlight"
+              [subtitle]="ts.t().home.industriesSubtitle"
+              [centered]="false">
+            </app-section-heading>
 
-          <div class="grid-3 industries-grid">
-            <app-industry-card *ngFor="let ind of ts.t().data.industriesList" [industry]="ind"></app-industry-card>
+            <!-- Top Slider Controls -->
+            <div class="slider-header-actions">
+              <div class="slider-live-badge">
+                <span class="live-dot" [class.paused]="isIndPaused"></span>
+                <span>{{ isIndPaused ? 'Paused' : 'Auto-Looping' }}</span>
+              </div>
+              <div class="slider-btn-group">
+                <button class="slider-nav-btn" (click)="prevInd()" aria-label="Previous Sector" title="Previous Slide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="slider-nav-btn" (click)="nextInd()" aria-label="Next Sector" title="Next Slide">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Viewport and Track -->
+          <div class="carousel-slider-wrapper" 
+               (mouseenter)="pauseInd()" 
+               (mouseleave)="resumeInd()"
+               (touchstart)="onTouchStart($event)"
+               (touchend)="onTouchEnd($event, 'ind')">
+            
+            <!-- Side Navigation Arrows -->
+            <button class="side-arrow arrow-prev" (click)="prevInd()" aria-label="Previous Slide">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="side-arrow arrow-next" (click)="nextInd()" aria-label="Next Slide">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <div class="carousel-viewport">
+              <div class="carousel-track ind-track" 
+                   [class.no-transition]="indNoTransition"
+                   [style.transform]="'translate3d(' + indTranslateX + ', 0, 0)'"
+                   (transitionend)="onIndTransitionEnd()">
+                <div *ngFor="let ind of displayIndustries; let idx = index" class="carousel-slide ind-slide">
+                  <app-industry-card [industry]="ind"></app-industry-card>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Pagination Dots -->
+            <div class="carousel-pagination">
+              <button *ngFor="let ind of industriesList; let i = index" 
+                      class="page-indicator-pill" 
+                      [class.active]="indNormalizedIndex === i"
+                      (click)="goToInd(i)"
+                      [attr.aria-label]="'Go to industry ' + (i + 1)">
+                <span class="indicator-bar"></span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -383,11 +564,67 @@ import { CtaSectionComponent } from '../../shared/components/cta-section/cta-sec
   `,
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   ts = inject(TranslationService);
   company = COMPANY_INFO;
 
+  // Solutions Slider State
+  solIndex = 8;
+  solNoTransition = false;
+  isSolPaused = false;
+  private solTimer?: any;
+
+  // Industries Slider State
+  indIndex = 6;
+  indNoTransition = false;
+  isIndPaused = false;
+  private indTimer?: any;
+
+  // Touch tracking for mobile swipe
+  private touchStartX = 0;
+  private touchEndX = 0;
+
   constructor(private seo: SeoService) {}
+
+  get solutionsList() {
+    return this.ts.t().data.coreSolutions || [];
+  }
+
+  get displaySolutions() {
+    const list = this.solutionsList;
+    return list.length ? [...list, ...list, ...list] : [];
+  }
+
+  get solNormalizedIndex(): number {
+    const n = this.solutionsList.length;
+    return n ? (this.solIndex % n) : 0;
+  }
+
+  get solTranslateX(): string {
+    const total = this.displaySolutions.length;
+    if (!total) return '0%';
+    return `-${(this.solIndex * 100) / total}%`;
+  }
+
+  get industriesList() {
+    return this.ts.t().data.industriesList || [];
+  }
+
+  get displayIndustries() {
+    const list = this.industriesList;
+    return list.length ? [...list, ...list, ...list] : [];
+  }
+
+  get indNormalizedIndex(): number {
+    const n = this.industriesList.length;
+    return n ? (this.indIndex % n) : 0;
+  }
+
+  get indTranslateX(): string {
+    const total = this.displayIndustries.length;
+    if (!total) return '0%';
+    return `-${(this.indIndex * 100) / total}%`;
+  }
 
   ngOnInit(): void {
     this.seo.updateSeo({
@@ -395,5 +632,130 @@ export class HomeComponent implements OnInit {
       description: 'DataSpire helps educational institutions, businesses, and cooperative banks transform data and technology into simple, secure, and actionable digital solutions.',
       keywords: 'DataSpire, Analytics, Digital Transformation, Education ERP, Cooperative Banking MIS, Cloud Software, Custom Application Development'
     });
+
+    this.solIndex = this.solutionsList.length || 8;
+    this.indIndex = this.industriesList.length || 6;
+    this.startAutoplay();
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoplay();
+  }
+
+  startAutoplay() {
+    this.stopAutoplay();
+    this.solTimer = setInterval(() => {
+      if (!this.isSolPaused) {
+        this.nextSol();
+      }
+    }, 3800);
+
+    this.indTimer = setInterval(() => {
+      if (!this.isIndPaused) {
+        this.nextInd();
+      }
+    }, 4500);
+  }
+
+  stopAutoplay() {
+    if (this.solTimer) clearInterval(this.solTimer);
+    if (this.indTimer) clearInterval(this.indTimer);
+  }
+
+  // Solution Carousel Controls
+  nextSol() {
+    this.solIndex++;
+  }
+
+  prevSol() {
+    this.solIndex--;
+  }
+
+  goToSol(index: number) {
+    const n = this.solutionsList.length;
+    this.solIndex = n + index;
+  }
+
+  onSolTransitionEnd() {
+    const n = this.solutionsList.length;
+    if (!n) return;
+    if (this.solIndex >= 2 * n) {
+      this.solNoTransition = true;
+      this.solIndex = this.solIndex - n;
+      setTimeout(() => {
+        this.solNoTransition = false;
+      }, 20);
+    } else if (this.solIndex < n) {
+      this.solNoTransition = true;
+      this.solIndex = this.solIndex + n;
+      setTimeout(() => {
+        this.solNoTransition = false;
+      }, 20);
+    }
+  }
+
+  pauseSol() {
+    this.isSolPaused = true;
+  }
+
+  resumeSol() {
+    this.isSolPaused = false;
+  }
+
+  // Industry Carousel Controls
+  nextInd() {
+    this.indIndex++;
+  }
+
+  prevInd() {
+    this.indIndex--;
+  }
+
+  goToInd(index: number) {
+    const n = this.industriesList.length;
+    this.indIndex = n + index;
+  }
+
+  onIndTransitionEnd() {
+    const n = this.industriesList.length;
+    if (!n) return;
+    if (this.indIndex >= 2 * n) {
+      this.indNoTransition = true;
+      this.indIndex = this.indIndex - n;
+      setTimeout(() => {
+        this.indNoTransition = false;
+      }, 20);
+    } else if (this.indIndex < n) {
+      this.indNoTransition = true;
+      this.indIndex = this.indIndex + n;
+      setTimeout(() => {
+        this.indNoTransition = false;
+      }, 20);
+    }
+  }
+
+  pauseInd() {
+    this.isIndPaused = true;
+  }
+
+  resumeInd() {
+    this.isIndPaused = false;
+  }
+
+  // Touch handlers for mobile swipe
+  onTouchStart(e: TouchEvent) {
+    this.touchStartX = e.changedTouches[0].screenX;
+  }
+
+  onTouchEnd(e: TouchEvent, slider: 'sol' | 'ind') {
+    this.touchEndX = e.changedTouches[0].screenX;
+    const diff = this.touchStartX - this.touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        slider === 'sol' ? this.nextSol() : this.nextInd();
+      } else {
+        slider === 'sol' ? this.prevSol() : this.prevInd();
+      }
+    }
   }
 }
