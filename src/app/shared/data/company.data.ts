@@ -117,21 +117,22 @@ export const LEADERSHIP_TEAM: TeamMember[] = [
     bio: 'Guiding DataSpire’s strategic vision, institutional partnerships, and digital transformation initiatives across education, banking, and enterprise domains.',
     focus: ['Strategic Vision', 'Enterprise Transformation', 'Operational Excellence']
   },
+
   {
     id: 'cto',
-    name: 'Bajrang Gangnar',
+    name: 'Rameshwar Kshirsagar',
     role: 'Co-Founder & Chief Technology Officer (CTO)',
     roleShort: 'Co-Founder & CTO',
-    image: 'assets/team/cto.jpg',
+    image: 'assets/team/cio.jpg',
     bio: 'Directing full-stack architecture, software engineering innovation, scalable product design, and next-gen institutional digital ecosystems.',
     focus: ['System Architecture', 'Software Engineering', 'Emerging Tech']
   },
   {
     id: 'cio',
-    name: 'Rameshwar Kshirsagar',
-    role: 'Chief Information Officer (CIO)',
-    roleShort: 'CIO',
-    image: 'assets/team/cio.jpg',
+    name: 'Bajrang Gangnar',
+    role: 'Co-Founder & Chief Information Officer (CIO)',
+    roleShort: 'Co-Founder & CIO',
+    image: 'assets/team/cto.png',
     bio: 'Overseeing enterprise information strategy, secure IT governance, cloud systems, and data-driven infrastructure for organizational growth.',
     focus: ['Information Architecture', 'Cloud Governance', 'IT Strategy']
   },

@@ -1119,19 +1119,19 @@ export const HI_TRANSLATION: SiteTranslation = {
       },
       {
         id: 'cto',
-        name: 'बजरंग गंगनर',
+        name: 'रामेश्वर क्षीरसागर',
         role: 'Co-Founder & Chief Technology Officer (CTO)',
         roleShort: 'Co-Founder & CTO',
-        image: 'assets/team/cto.jpg',
+        image: 'assets/team/cio.jpg',
         bio: 'फुल-स्टैक आर्किटेक्चर, सॉफ्टवेयर इंजीनियरिंग इनोवेशन, स्केलेबल प्रोडक्ट डिज़ाइन और आधुनिक डिजिटल इकोसिस्टम के प्रमुख।',
         focus: ['सिस्टम आर्किटेक्चर', 'सॉफ्टवेयर इंजीनियरिंग', 'उभरती तकनीक']
       },
       {
         id: 'cio',
-        name: 'रामेश्वर क्षीरसागर',
-        role: 'Chief Information Officer (CIO)',
-        roleShort: 'CIO',
-        image: 'assets/team/cio.jpg',
+        name: 'बजरंग गंगनर',
+        role: 'Co-Founder & Chief Information Officer (CIO)',
+        roleShort: 'Co-Founder & CIO',
+        image: 'assets/team/cto.png',
         bio: 'सूचना रणनीति, सुरक्षित आईटी प्रशासन, क्लाउड सिस्टम और डेटा-संचालित इन्फ्रास्ट्रक्चर की देखरेख।',
         focus: ['इन्फॉर्मेशन आर्किटेक्चर', 'क्लाउड गवर्नेंस', 'आईटी स्ट्रैटेजी']
       },
