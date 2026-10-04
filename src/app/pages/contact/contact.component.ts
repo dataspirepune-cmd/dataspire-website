@@ -361,7 +361,7 @@ Sent from DataSpire Corporate Portal`;
       this.isSending = true;
       this.submissionType = 'email';
 
-      // Perform direct serverless submission to FormSubmit using the activated token for dataspirepune@gmail.com
+      // Perform direct serverless submission to FormSubmit using the token for dataspirepune@gmail.com
       const formSubmitToken = '99f839ec14f022c088b7ebbe35178254';
       const payload = {
         name: name,
@@ -383,15 +383,31 @@ Sent from DataSpire Corporate Portal`;
         },
         body: JSON.stringify(payload)
       })
-      .then(response => {
+      .then(async (response) => {
         this.isSending = false;
-        this.emailSentDirectly = true;
+        let isSuccess = false;
+        try {
+          const data = await response.json();
+          if (response.ok && (data?.success === 'true' || data?.success === true)) {
+            isSuccess = true;
+          }
+        } catch {
+          isSuccess = response.ok;
+        }
+
+        if (isSuccess) {
+          this.emailSentDirectly = true;
+        } else {
+          // If domain activation is needed or submission fails, gracefully fallback
+          this.emailSentDirectly = false;
+          window.open(this.gmailUrl, '_blank');
+        }
         this.isSubmitted = true;
       })
-      .catch(err => {
-        // Fallback gracefully without showing error
+      .catch(() => {
         this.isSending = false;
         this.emailSentDirectly = false;
+        window.open(this.gmailUrl, '_blank');
         this.isSubmitted = true;
       });
     }
